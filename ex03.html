@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disparar eventos com Listener</title>
+    <style> 
+        body { 
+            background-color: rgb(90, 168, 173)
+        }
+        div#area{
+                background: rgb(144, 183, 228);
+                color: rgb(0, 0, 0);
+                width: 200px;
+                height: 200px;
+                text-align: center;
+                line-height: 200px;
+                font-size: 20pt;
+                font-family: Arial, Helvetica, sans-serif;
+                
+        }
+    </style>
+</head>
+<body>
+    <h1>Disparar eventos com Listener</h1>
+    <p> Alem de disparar eventos diretamente no HTML, podemos utilizar listener para disparar eventos dentro do JS</p>
+    <div id="area"> Interaja</div>
+    <a href="ex00.html" rel="next"> Voltar para a homepage!</a>
+   <script> 
+        var a = document.querySelector("div#area");
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair);
+        function clicar(){
+            a.innerHTML = 'clicou'
+            a.style.background= 'white'
+        }    
+        function entrar(){
+            a.innerHTML = 'entrou'
+            a.style.background= 'green'
+        }
+        function sair(){
+            a.innerHTML = 'saiu'
+            a.style.background= 'aquamarine'
+        }   
+    </script>
+</body>
+</html>
